@@ -72,10 +72,10 @@ C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\n
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\ChatbotF.708A326B.Up2Date
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\ChatbotFAQApi.dll
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\refint\ChatbotFAQApi.dll
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\ChatbotFAQApi.pdb
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\ChatbotFAQApi.genruntimeconfig.cache
 C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\ref\ChatbotFAQApi.dll
+C:\Users\CT_USER\Desktop\ChatBot\Backend\ChatbotFAQApi\ChatbotFAQApi\obj\Debug\net8.0\ChatbotFAQApi.sourcelink.json

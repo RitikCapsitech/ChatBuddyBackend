@@ -40,6 +40,52 @@ namespace ChatbotFAQApi.Controllers
                 AssignOptionIdsRecursively(option.Options);
             }
         }
+        // Method to find a match in FAQs recursively
+        private (string reply, List<string> options)? FindMatchRecursive(List<FaqItem> faqs, string message)
+        {
+            foreach (var faq in faqs)
+            {
+                // Match the question itself
+                if (faq.Query.Equals(message, StringComparison.OrdinalIgnoreCase))
+                {
+                    var opts = faq.Options?.Select(o => o.OptionText).ToList() ?? new List<string>();
+                    return (faq.Response, opts);
+                }
+
+                // Search inside options recursively
+                if (faq.Options != null)
+                {
+                    foreach (var option in faq.Options)
+                    {
+                        var result = FindInOption(option, message);
+                        if (result != null)
+                            return result;
+                    }
+                }
+            }
+            return null;
+        }
+
+        private (string reply, List<string> options)? FindInOption(FaqOption option, string message)
+        {
+            if (option.OptionText.Equals(message, StringComparison.OrdinalIgnoreCase))
+            {
+                var opts = option.Options?.Select(o => o.OptionText).ToList() ?? new List<string>();
+                return (option.Response, opts);
+            }
+
+            if (option.Options != null)
+            {
+                foreach (var nested in option.Options)
+                {
+                    var result = FindInOption(nested, message);
+                    if (result != null)
+                        return result;
+                }
+            }
+            return null;
+        }
+
 
         //GET All FAQs
         [HttpGet]
@@ -278,43 +324,38 @@ namespace ChatbotFAQApi.Controllers
                     res.Status = false;
                     return res;
                 }
+
                 session.Messages.Add(new ChatMessage
                 {
                     Sender = "user",
                     Text = request.Message,
                     Timestamp = DateTime.UtcNow
                 });
+
                 var faqs = await _faqService.GetAsync();
-                var matched = faqs.FirstOrDefault(f => f.Query.Equals(request.Message, StringComparison.OrdinalIgnoreCase));
                 string reply;
                 List<string> options = new List<string>();
-                if (matched != null)
+
+                var matchResult = FindMatchRecursive(faqs, request.Message);
+                if (matchResult != null)
                 {
-                    var matchedOption = matched.Options?.FirstOrDefault(opt =>
-                        opt.OptionText.Equals(request.Message, StringComparison.OrdinalIgnoreCase));
-                    if (matchedOption != null)
-                    {
-                        reply = matchedOption.Response;
-                    }
-                    else
-                    {
-                        reply = matched.Response;
-                        options = matched.Options?.Select(opt => opt.OptionText).ToList() ?? new List<string>();
-                    }
+                    reply = matchResult.Value.reply;
+                    options = matchResult.Value.options;
                 }
                 else
                 {
-                    var matchedOption = faqs.SelectMany(f => f.Options ?? new List<FaqOption>())
-                        .FirstOrDefault(opt => opt.OptionText.Equals(request.Message, StringComparison.OrdinalIgnoreCase));
-                    reply = matchedOption?.Response ?? "Sorry, I don't have an answer for that.";
+                    reply = "Sorry, I don't have an answer for that.";
                 }
+
                 session.Messages.Add(new ChatMessage
                 {
                     Sender = "bot",
                     Text = reply,
                     Timestamp = DateTime.UtcNow
                 });
+
                 await _chatSessionService.UpdateAsync(sessionId, session);
+
                 res.Message = "Chat continued successfully";
                 res.Status = true;
                 res.Result = new { sessionId, reply, options };
@@ -326,6 +367,7 @@ namespace ChatbotFAQApi.Controllers
             }
             return res;
         }
+
         // Get chat history by session ID
         [HttpGet("chat/{sessionId}")]
         public async Task<AiResponse<ChatSession>> GetChatHistory(string sessionId)
