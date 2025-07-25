@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\controllers\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\controllers\\faqcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\models\\chatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\models\\chatsession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\models\\faqdatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\models\\faqdatabasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\services\\faqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\services\\faqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\services\\chatsessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\services\\chatsessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\models\\faqitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\models\\faqitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|c:\\users\\ct_user\\desktop\\chatbot\\backend\\chatbotfaqapi\\chatbotfaqapi\\chatbotfaqapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4537267F-AA99-4141-A8C6-B7BA6770C544}|ChatbotFAQApi\\ChatbotFAQApi.csproj|solutionrelative:chatbotfaqapi\\chatbotfaqapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FaqController.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Controllers\\FaqController.cs",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\Controllers\\FaqController.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Controllers\\FaqController.cs",
+              "RelativeToolTip": "ChatbotFAQApi\\Controllers\\FaqController.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAAwHIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:21:18.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\appsettings.json",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\appsettings.json",
+              "RelativeToolTip": "ChatbotFAQApi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-25T10:22:26.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Program.cs",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\Program.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Program.cs",
+              "RelativeToolTip": "ChatbotFAQApi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:22:22.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Chatsession.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Models\\Chatsession.cs",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\Models\\Chatsession.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Models\\Chatsession.cs",
+              "RelativeToolTip": "ChatbotFAQApi\\Models\\Chatsession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:18:56.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FaqDatabaseSettings.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Models\\FaqDatabaseSettings.cs",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\Models\\FaqDatabaseSettings.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Models\\FaqDatabaseSettings.cs",
+              "RelativeToolTip": "ChatbotFAQApi\\Models\\FaqDatabaseSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:19:22.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FaqService.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Services\\FaqService.cs",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\Services\\FaqService.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Services\\FaqService.cs",
+              "RelativeToolTip": "ChatbotFAQApi\\Services\\FaqService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:20:39.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FaqItem.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Models\\FaqItem.cs",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\Models\\FaqItem.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Models\\FaqItem.cs",
+              "RelativeToolTip": "ChatbotFAQApi\\Models\\FaqItem.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:19:39.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChatSessionService.cs",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Services\\ChatSessionService.cs",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\Services\\ChatSessionService.cs",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\Services\\ChatSessionService.cs",
+              "RelativeToolTip": "ChatbotFAQApi\\Services\\ChatSessionService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwBwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:20:15.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChatbotFAQApi.csproj",
+              "DocumentMoniker": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\ChatbotFAQApi.csproj",
+              "RelativeDocumentMoniker": "ChatbotFAQApi\\ChatbotFAQApi.csproj",
+              "ToolTip": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\ChatbotFAQApi.csproj",
+              "RelativeToolTip": "ChatbotFAQApi\\ChatbotFAQApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-25T10:18:16.887Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
