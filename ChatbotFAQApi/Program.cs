@@ -20,6 +20,28 @@ builder.Services.AddCors(o => o.AddPolicy("Public",
          p => p.WithOrigins("https://ritikcapsitech.github.io", "https://your-site.com")
                .AllowAnyHeader().AllowAnyMethod()));
 
+// Auto-bind to Render's PORT if present so ASPNETCORE_URLS is not required
+var renderPort = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrWhiteSpace(renderPort))
+{
+    builder.WebHost.UseUrls($"http://0.0.0.0:{renderPort}");
+}
+
+// Fallback: if ConnectionString is empty, accept standard env names like MONGODB_URI
+builder.Services.PostConfigure<FaqDatabaseSettings>(opts =>
+{
+    if (string.IsNullOrWhiteSpace(opts.ConnectionString))
+    {
+        var alt = Environment.GetEnvironmentVariable("MONGODB_URI")
+                  ?? Environment.GetEnvironmentVariable("MONGO_URI")
+                  ?? Environment.GetEnvironmentVariable("MONGO_URL");
+        if (!string.IsNullOrWhiteSpace(alt))
+        {
+            opts.ConnectionString = alt;
+        }
+    }
+});
+
 var app = builder.Build();
 
 // ? Swagger UI (Development or when ENABLE_SWAGGER=true)
