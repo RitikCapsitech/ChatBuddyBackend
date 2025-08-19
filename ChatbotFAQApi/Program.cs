@@ -16,8 +16,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(o => o.AddPolicy("Public",
+         p => p.WithOrigins("https://ritikcapsitech.github.io", "https://your-site.com")
+               .AllowAnyHeader().AllowAnyMethod()));
+
 var app = builder.Build();
-builder.Services.AddCors();
 
 // ? Swagger UI (Development Only)
 if (app.Environment.IsDevelopment())
@@ -25,13 +28,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseCors(p => p
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    .SetIsOriginAllowed(_ => true) // allow any origin
-    .AllowCredentials()
-    .SetPreflightMaxAge(TimeSpan.FromSeconds(600))
-    .WithExposedHeaders("Content-Disposition"));
+//app.UseCors(p => p
+//    .AllowAnyMethod()
+//    .AllowAnyHeader()
+//    .SetIsOriginAllowed(_ => true) // allow any origin
+//    .AllowCredentials()
+//    .SetPreflightMaxAge(TimeSpan.FromSeconds(600))
+//    .WithExposedHeaders("Content-Disposition"));
+app.UseCors("Public");
 
 // ? Middleware Pipeline
 app.UseHttpsRedirection();
