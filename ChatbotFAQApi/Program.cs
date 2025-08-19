@@ -22,8 +22,10 @@ builder.Services.AddCors(o => o.AddPolicy("Public",
 
 var app = builder.Build();
 
-// ? Swagger UI (Development Only)
-if (app.Environment.IsDevelopment())
+// ? Swagger UI (Development or when ENABLE_SWAGGER=true)
+var enableSwagger = app.Environment.IsDevelopment() ||
+                    builder.Configuration.GetValue<bool>("ENABLE_SWAGGER", false);
+if (enableSwagger)
 {
     app.UseSwagger();
     app.UseSwaggerUI();
