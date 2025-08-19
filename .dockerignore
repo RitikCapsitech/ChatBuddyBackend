@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+.vs/
+.git
+.gitignore
+out/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
