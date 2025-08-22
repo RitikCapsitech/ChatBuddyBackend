@@ -13,6 +13,7 @@ namespace ChatbotFAQApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Tags("FAQ Management")]
     public class FaqController : ControllerBase
     {
         private readonly FaqService _faqService;
@@ -86,9 +87,9 @@ namespace ChatbotFAQApi.Controllers
             return null;
         }
 
-
         //GET All FAQs
         [HttpGet]
+       
         public async Task<AiResponse<List<FaqItem>>> Get()
         {
             var res = new AiResponse<List<FaqItem>>();
@@ -255,153 +256,9 @@ namespace ChatbotFAQApi.Controllers
             }
             return res;
         }
-        // Chat-related endpoints(Start, session ID created)
-        [HttpPost("chat/start")]
-        public async Task<AiResponse<object>> StartChat([FromBody] ChatRequest request)
-        {
-            var res = new AiResponse<object>();
-            try
-            {
-                string sessionId = Guid.NewGuid().ToString();
-                var session = new ChatSession { SessionId = sessionId };
-                session.Messages.Add(new ChatMessage
-                {
-                    Sender = "user",
-                    Text = request.Message,
-                    Timestamp = DateTime.UtcNow
-                });
-                var faqs = await _faqService.GetAsync();
-                var matched = faqs.FirstOrDefault(f => f.Query.Equals(request.Message, StringComparison.OrdinalIgnoreCase));
-                string reply;
-                List<string> options = new List<string>();
-                if (matched != null)
-                {
-                    var matchedOption = matched.Options?.FirstOrDefault(opt =>
-                        opt.OptionText.Equals(request.Message, StringComparison.OrdinalIgnoreCase));
-                    if (matchedOption != null)
-                    {
-                        reply = matchedOption.Response;
-                    }
-                    else
-                    {
-                        reply = matched.Response;
-                        options = matched.Options?.Select(opt => opt.OptionText).ToList() ?? new List<string>();
-                    }
-                }
-                else
-                {
-                    reply = "Sorry, I don't have an answer for that.";
-                }
-                session.Messages.Add(new ChatMessage
-                {
-                    Sender = "bot",
-                    Text = reply,
-                    Timestamp = DateTime.UtcNow
-                });
-                await _chatSessionService.CreateAsync(session);
-                res.Message = "Chat started successfully";
-                res.Status = true;
-                res.Result = new { sessionId, reply, options };
-            }
-            catch (Exception ex)
-            {
-                res.Message = "Error: " + ex.Message;
-                res.Status = false;
-            }
-            return res;
-        }
-        // Continue chat with session ID
-        [HttpPost("chat/{sessionId}")]
-        public async Task<AiResponse<object>> ContinueChat(string sessionId, [FromBody] ChatRequest request)
-        {
-            var res = new AiResponse<object>();
-            try
-            {
-                var session = await _chatSessionService.GetBySessionIdAsync(sessionId);
-                if (session == null)
-                {
-                    res.Message = "Session not found.";
-                    res.Status = false;
-                    return res;
-                }
 
-                session.Messages.Add(new ChatMessage
-                {
-                    Sender = "user",
-                    Text = request.Message,
-                    Timestamp = DateTime.UtcNow
-                });
-
-                var faqs = await _faqService.GetAsync();
-                string reply;
-                List<string> options = new List<string>();
-
-                var matchResult = FindMatchRecursive(faqs, request.Message);
-                if (matchResult != null)
-                {
-                    reply = matchResult.Value.reply;
-                    options = matchResult.Value.options;
-                }
-                else
-                {
-                    reply = "Sorry, I don't have an answer for that.";
-                }
-
-                session.Messages.Add(new ChatMessage
-                {
-                    Sender = "bot",
-                    Text = reply,
-                    Timestamp = DateTime.UtcNow
-                });
-
-                await _chatSessionService.UpdateAsync(sessionId, session);
-
-                res.Message = "Chat continued successfully";
-                res.Status = true;
-                res.Result = new { sessionId, reply, options };
-            }
-            catch (Exception ex)
-            {
-                res.Message = "Error: " + ex.Message;
-                res.Status = false;
-            }
-            return res;
-        }
-
-        // Get chat history by session ID
-        [HttpGet("chat/{sessionId}")]
-        public async Task<AiResponse<ChatSession>> GetChatHistory(string sessionId)
-        {
-            var res = new AiResponse<ChatSession>();
-            try
-            {
-                var session = await _chatSessionService.GetBySessionIdAsync(sessionId);
-                if (session == null)
-                {
-                    res.Message = "Session not found.";
-                    res.Status = false;
-                }
-                else
-                {
-                    res.Message = "Chat history fetched successfully";
-                    res.Status = true;
-                    res.Result = session;
-                }
-            }
-            catch (Exception ex)
-            {
-                res.Message = "Error: " + ex.Message;
-                res.Status = false;
-            }
-            return res;
-        }
     }
 
-    // Models for request and response
-    public class ChatRequest
-    {
-        public string Message { get; set; }
-    }
     // Generic response model
     public class AiResponse<T>
     {

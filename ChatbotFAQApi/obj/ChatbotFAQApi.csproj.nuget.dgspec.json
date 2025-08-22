@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\ChatbotFAQApi.csproj": {}
+    "C:\\Users\\CT_USER\\Desktop\\clonefile\\Widget_Api\\ChatbotFAQApi\\ChatbotFAQApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\ChatbotFAQApi.csproj": {
+    "C:\\Users\\CT_USER\\Desktop\\clonefile\\Widget_Api\\ChatbotFAQApi\\ChatbotFAQApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\ChatbotFAQApi.csproj",
+        "projectUniqueName": "C:\\Users\\CT_USER\\Desktop\\clonefile\\Widget_Api\\ChatbotFAQApi\\ChatbotFAQApi.csproj",
         "projectName": "ChatbotFAQApi",
-        "projectPath": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\ChatbotFAQApi.csproj",
+        "projectPath": "C:\\Users\\CT_USER\\Desktop\\clonefile\\Widget_Api\\ChatbotFAQApi\\ChatbotFAQApi.csproj",
         "packagesPath": "C:\\Users\\CT_USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CT_USER\\Desktop\\ChatBot\\Backend\\ChatbotFAQApi\\ChatbotFAQApi\\obj\\",
+        "outputPath": "C:\\Users\\CT_USER\\Desktop\\clonefile\\Widget_Api\\ChatbotFAQApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

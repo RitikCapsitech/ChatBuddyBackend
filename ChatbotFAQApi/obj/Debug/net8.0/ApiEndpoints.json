@@ -1,5 +1,97 @@
 [
   {
+    "ContainingType": "ChatbotFAQApi.Controllers.ChatController",
+    "Method": "ContinueChat",
+    "RelativePath": "api/Chat/chat/{sessionId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessionId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "ChatbotFAQApi.Controllers.ChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChatbotFAQApi.Controllers.AiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Chats"
+    ]
+  },
+  {
+    "ContainingType": "ChatbotFAQApi.Controllers.ChatController",
+    "Method": "GetChatHistory",
+    "RelativePath": "api/Chat/chat/{sessionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessionId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChatbotFAQApi.Controllers.AiResponse\u00601[[ChatbotFAQApi.Models.ChatSession, ChatbotFAQApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Chats"
+    ]
+  },
+  {
+    "ContainingType": "ChatbotFAQApi.Controllers.ChatController",
+    "Method": "StartChat",
+    "RelativePath": "api/Chat/chat/start",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ChatbotFAQApi.Controllers.ChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ChatbotFAQApi.Controllers.AiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Chats"
+    ]
+  },
+  {
     "ContainingType": "ChatbotFAQApi.Controllers.FaqController",
     "Method": "Get",
     "RelativePath": "api/Faq",
@@ -17,6 +109,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "FAQ Management"
     ]
   },
   {
@@ -43,6 +138,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "FAQ Management"
     ]
   },
   {
@@ -69,6 +167,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "FAQ Management"
     ]
   },
   {
@@ -100,6 +201,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "FAQ Management"
     ]
   },
   {
@@ -126,6 +230,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "FAQ Management"
     ]
   },
   {
@@ -146,6 +253,9 @@
         ],
         "StatusCode": 200
       }
+    ],
+    "Tags": [
+      "FAQ Management"
     ]
   },
   {
@@ -172,89 +282,9 @@
         ],
         "StatusCode": 200
       }
-    ]
-  },
-  {
-    "ContainingType": "ChatbotFAQApi.Controllers.FaqController",
-    "Method": "ContinueChat",
-    "RelativePath": "api/Faq/chat/{sessionId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sessionId",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "request",
-        "Type": "ChatbotFAQApi.Controllers.ChatRequest",
-        "IsRequired": true
-      }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ChatbotFAQApi.Controllers.AiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ChatbotFAQApi.Controllers.FaqController",
-    "Method": "GetChatHistory",
-    "RelativePath": "api/Faq/chat/{sessionId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sessionId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ChatbotFAQApi.Controllers.AiResponse\u00601[[ChatbotFAQApi.Models.ChatSession, ChatbotFAQApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ChatbotFAQApi.Controllers.FaqController",
-    "Method": "StartChat",
-    "RelativePath": "api/Faq/chat/start",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "ChatbotFAQApi.Controllers.ChatRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ChatbotFAQApi.Controllers.AiResponse\u00601[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
+    "Tags": [
+      "FAQ Management"
     ]
   }
 ]
